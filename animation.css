@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #f5f5f5;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    /*top: 5rem;
+    */
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 10px 10px 50px rgba(50, 50, 50, 0.5), inset 1px 1px 50px rgba(50, 50, 50, 0.5);
+    animation: animate2 20s infinite;
+    -webkit-animation: animate2 20s infinite;
+}
+
+.day_background {
+    background: #87CEEB;
+}
+
+.night_background {
+    background: #000;
+}
+
+#circle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    top: 20px;
+}
+
+.sun {
+    visibility: hidden;
+}
+
+.moon {
+    position: absolute;
+    background-color: #f4f4f4;
+    left: 10px;
+    animation: animate1 20s infinite;
+    -webkit-animation: animate1 20s infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        background: #f4f4f4;
+        left: 0px;
+        top: 70%;
+    }
+    25% {
+        background: #FFCC33;
+        box-shadow: 1px 1px 50px rgba( 218, 203, 125, 0.9), inset 1px 1px 50px rgba( 218, 203, 125, 0.9);
+    }
+    50% {
+        background: #f4f4f4;
+        box-shadow: 1px 1px 50px rgba( 248, 223, 25, 0.9), inset 1px 1px 50px rgba( 248, 223, 25, 0.9);
+        left: 40%;
+        top: 75px;
+    }
+    75% {
+        background: #FFCC33;
+        box-shadow: 1px 1px 50px rgba( 218, 203, 125, 0.9), inset 1px 1px 50px rgba( 218, 203, 125, 0.9);
+    }
+    100% {
+        background: #f4f4f4;
+        left: 80%;
+        top: 70%;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background: #000;
+    }
+    50% {
+        background: #87CEEB;
+    }
+    100% {
+        background: #000;
+    }
+}
+
+.mountains {
+    display: flex;
+    justify-content: space-between;
+    gap: 10;
+    position: absolute;
+    bottom: 0;
+}
+
+.mountain {
+    background-color: #92764D;
+    width: 10rem;
+    height: 15rem;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 60px;
+    box-shadow: 5px 5px 50px rgba(50, 50, 50, 0.9), inset 5px 5px 50px rgba(50, 50, 50, 0.9);
+}
+
+.mountain_set2 {
+    position: absolute;
+    right: 0px;
+}
