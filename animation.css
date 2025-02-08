@@ -22,8 +22,8 @@ body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     box-shadow: 10px 10px 50px rgba(50, 50, 50, 0.5), inset 1px 1px 50px rgba(50, 50, 50, 0.5);
-    animation: animate2 20s infinite;
-    -webkit-animation: animate2 20s infinite;
+    animation: animate2 10s infinite;
+    -webkit-animation: animate2 10s infinite;
 }
 
 .day_background {
@@ -48,15 +48,20 @@ body {
 }
 
 .sun {
-    visibility: hidden;
+    position: absolute;
+    background-color: #f4f4f4;
+    left: 10px;
+    opacity: 0;
+    animation: animate3 10s infinite;
+    -webkit-animation: animate3 10s infinite;
 }
 
 .moon {
     position: absolute;
     background-color: #f4f4f4;
     left: 10px;
-    animation: animate1 20s infinite;
-    -webkit-animation: animate1 20s infinite;
+    animation: animate1 10s infinite;
+    -webkit-animation: animate1 10s infinite;
 }
 
 @keyframes animate1 {
@@ -95,6 +100,24 @@ body {
     }
     100% {
         background: #000;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
